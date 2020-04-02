@@ -1,6 +1,6 @@
 <h2> Customer Rewards Service </h2>
-This service is implemented to calculate the reward points based on the product purchase by the customer
-The data is store as a in-memory hash map for this implementation. For real world use, you can use any persistent database
+This service is implemented to calculate the reward points based on the product purchases by the customer.
+The data is stored as a in-memory hash map for this implementation. For the real world use case, you can use any persistent database.
 
 <h3> Compile and run the application</h3>
 
@@ -13,7 +13,7 @@ Run all JUnits Tests
 mvn clean test
 ```
 
-Run the application using below command or Run the main app class RewardCalculatorApplication from IDE
+Run the application using below command or Run the main app class RewardCalculatorApplication from any Java based IDE.
 ```
 ./mvnw spring-boot:run
 ```
@@ -21,7 +21,7 @@ Run the application using below command or Run the main app class RewardCalculat
 <h3>Product's Rewards APIs</h3>
 There are 3 rest endpoints created for this service:
 
-API 1 : This API is used to purchase the product by given customer and calculates the rewards points internally
+API 1 : This API is used to purchase the product by given customer and calculates the rewards points internally.
 - URL : http://localhost:8080/purchase
 - URI Path : /purchase 
 - HTTP Method: POST
@@ -41,7 +41,7 @@ API 1 : This API is used to purchase the product by given customer and calculate
 }
 ```
 
-API 2: This API is used to search the reward points based on customer name. This API can also giv you ability to search based on filter days
+API 2: This API is used to search the reward points based on customer name. This API can also give you an ability to search rewards based on number of days provided.
 - URL: http://localhost:8080/rewards/search
 - URI Path: /rewards/search
 - Http Method: GET
@@ -51,7 +51,7 @@ API 2: This API is used to search the reward points based on customer name. This
     - filterDays 
 
 
-API 3: This API is used to give all the transactions made by customers
+API 3: This API is used to give all the transactions made by customers.
 - URL: http://localhost:8080/rewards/transaction
 - URI Path: /rewards/transaction
 - Http Method: GET
