@@ -1,24 +1,32 @@
-# rewards-service
+<h2> Customer Rewards Service </h2>
 This service is implemented to calculate the reward points based on the product purchase by the customer
 The data is store as a in-memory hash map for this implementation. For real world use, you can use any persistent database
 
-Compile and run the application
-mvn clean package
+<h3> Compile and run the application</h3>
 
-Run all JUNits test
+```
+mvn clean package
+```
+
+Run all JUnits Tests
+```
 mvn clean test
+```
 
 Run the application using below command or Run the main app class RewardCalculatorApplication from IDE
+```
 ./mvnw spring-boot:run
+```
 
-
+<h3>Product's Rewards APIs</h3>
 There are 3 rest endpoints created for this service:
 
 API 1 : This API is used to purchase the product by given customer and calculates the rewards points internally
-URL : http://localhost:8080/purchase
-URI Path : /purchase 
-HTTP Method: POST
-JSON Payload
+- URL : http://localhost:8080/purchase
+- URI Path : /purchase 
+- HTTP Method: POST
+- JSON Payload
+```
 {
 	"customer" : {
 		"firstName" : "Kapil",
@@ -31,23 +39,25 @@ JSON Payload
 		"price" : "120"
 	}
 }
+```
 
 API 2: This API is used to search the reward points based on customer name. This API can also giv you ability to search based on filter days
-URL: http://localhost:8080/rewards/search
-URI Path: /rewards/search
-Http Method: GET
-Query Parameters: 
- - firstName
- - lastName
- - filterDays 
+- URL: http://localhost:8080/rewards/search
+- URI Path: /rewards/search
+- Http Method: GET
+- Query Parameters: 
+    - firstName
+    - lastName
+    - filterDays 
 
 
 API 3: This API is used to give all the transactions made by customers
-URL: http://localhost:8080/rewards/transaction
-URI Path: /rewards/transaction
-Http Method: GET
+- URL: http://localhost:8080/rewards/transaction
+- URI Path: /rewards/transaction
+- Http Method: GET
 
 
+<h3>Swagger UI</h3>
 This services are also exposed via Swagger UI. Navigate below swagger UI for more details:
-http://localhost:8080/swagger-ui.html
-http://localhost:8080/v2/
+- http://localhost:8080/swagger-ui.html
+- http://localhost:8080/v2/
