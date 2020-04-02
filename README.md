@@ -51,7 +51,7 @@ API 2: This API is used to search the reward points based on customer name. This
     - filterDays 
 
 
-API 3: This API is used to give all the transactions made by customers.
+API 3: This API is used to give all the transactions made by customers along with their rewards earned on each of those transaction.
 - URL: http://localhost:8080/rewards/transaction
 - URI Path: /rewards/transaction
 - Http Method: GET
